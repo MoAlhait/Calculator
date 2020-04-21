@@ -34,10 +34,11 @@ class Application(tk.Frame):
 	
 	def changeBlue(self):
 		self.configure(bg="blue")
-		
-root1 = tk.Tk()
-app = Application(master=root1)
-app.mainloop()
+
+if __name__ == "__main__":
+	root1 = tk.Tk()
+	app = Application(master=root1)
+	app.mainloop()
 
  #2 buttons 1 red 1 blue 1 says red on it other says blue on it
 	#click the red back becomes red blue back becomes blue
