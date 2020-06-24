@@ -2,7 +2,7 @@ import tkinter as tk
 
 class Calculator(tk.Canvas):
 	def __init__(self, master=None):
-		width = 350
+		width = 340
 		height = 400
 		# Initialize a frame with width 350, height 400 and the bg Pink
 		super().__init__(master, width = width, height = height,bg="pink")
@@ -17,8 +17,13 @@ class Calculator(tk.Canvas):
 		x2 = (width/2) + (calcWidth/2)
 		y2 = (height/2) + (calcHeight/2)
 		self.create_rectangle(x1,y1,x2,y2)
+		self.makeButton (x= x1 ,y= y1, w= calcWidth, h= calcHeight, value= '1', color='pink')
+
+	def makeButton(self,x,y,w,h,value,color):
+		return tk.Button(self, text= value,  bg= color).place(x= x, y= y, width= w, height= h,)
 
 
+		
 
 
 
