@@ -17,14 +17,22 @@ class Calculator(tk.Canvas):
 		x2 = (width/2) + (calcWidth/2)
 		y2 = (height/2) + (calcHeight/2)
 		self.create_rectangle(x1,y1,x2,y2)
-		self.makeButton (x= x1 ,y= y1, w= calcWidth, h= calcHeight, value= '1', color='pink')
+		for x in range(int(x1), int(x2), calcWidth // 4):
+			for y in range(int(y1+ 75), int(y2), int((y2 - (y1 + 75)) / 5)):
+				self.makeButton (x = x ,y= y, w= 50, h= 25, value= 'MC', color='pink')		
+
+
+
+
+
+
+
 
 	def makeButton(self,x,y,w,h,value,color):
 		return tk.Button(self, text= value,  bg= color).place(x= x, y= y, width= w, height= h,)
 
 
 		
-
 
 
 
